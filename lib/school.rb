@@ -1,5 +1,5 @@
 # code here!
-require 'pry'
+
 class School
     attr_accessor :roster
     def initialize(name)
@@ -8,13 +8,10 @@ class School
     end
 
     def add_student(student_name, grade)
-        #binding.pry()
-#        @roster[student_name] = grade
         if(@roster[grade] == nil)
             @roster[grade] = []
         end        
-        @roster[grade].push(student_name)
-        #binding.pry()
+        @roster[grade].push(student_name)        
     end
 
     def grade(gradeToRetrieve)
@@ -27,9 +24,3 @@ class School
     }
     end
 end
-
-
-
-school = School.new("Bayside High School")
-school.add_student("Zach Morris", 9)
-puts school.roster
